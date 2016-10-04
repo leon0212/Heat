@@ -61,7 +61,7 @@ background('lightgray');
   text("Heat Energy Needed To : ",7,580);
   text("Get To Boiling Point ",7,600);
   textSize(25);
-  text("Q = (Mass)(Specific Heat)(Change in time)",20,58);
+  text("Q = (Mass)(Specific Heat)(Change in temp)",20,58);
   
 ///////////////////////////////////////////////////////////////////////////////////////////
 if (flame==true){
