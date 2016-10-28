@@ -5,6 +5,7 @@ var shtext;
 var boilpt;
 var flame;
 var templ;
+var running = true;
 
 function setup() {
   canvas = createCanvas(640, 800);
@@ -124,7 +125,16 @@ function filler(){
 }
 
 function togglePlayButton(){
+if (!running){
+running = true;
 flame=true;
+return
+}
+if (running){
+      running = false;
+      flame=false;
+      return
+    }
 }
 
 function drawContainer(){
