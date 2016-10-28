@@ -5,7 +5,7 @@ var shtext;
 var boilpt;
 var flame;
 var templ;
-var running = true;
+var running = false;
 
 function setup() {
   canvas = createCanvas(640, 800);
@@ -131,8 +131,8 @@ flame=true;
 return
 }
 if (running){
+	  flame=false;
       running = false;
-      flame=false;
       return
     }
 }
