@@ -5,6 +5,7 @@ var shtext;
 var boilpt;
 var flame;
 var templ;
+var running = true;
 
 function setup() {
   canvas = createCanvas(640, 800);
@@ -61,7 +62,7 @@ background('lightgray');
   text("Heat Energy Needed To : ",7,580);
   text("Get To Boiling Point ",7,600);
   textSize(25);
-  text("Q = (Mass)(Specific Heat)(Change in temp)",20,58);
+  text("Q = (Mass)(Specific Heat)(Change in time)",20,58);
   
 ///////////////////////////////////////////////////////////////////////////////////////////
 if (flame==true){
@@ -124,7 +125,16 @@ function filler(){
 }
 
 function togglePlayButton(){
+if (!running){
+running = true;
 flame=true;
+return
+}
+if (running){
+      running = false;
+      flame=false;
+      return
+    }
 }
 
 function drawContainer(){
